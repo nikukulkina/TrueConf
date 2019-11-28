@@ -1,0 +1,6 @@
+mixin select-menu(items)
+	+b('ul').select-menu.js-menu&attributes(attributes)
+		each item in items
+			+e('li').item
+				+e('button').button.js-button(id=item.id)
+					+e('img').flag(src=item.src alt=item.alt)

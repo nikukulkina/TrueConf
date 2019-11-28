@@ -1,0 +1,15 @@
+include /blocks/checkbox/checkbox
+include /blocks/form-input/form-input
+include /blocks/help-link/help-link
+
+mixin login-form()
+	+b('form').login-form(action='' method='')&attributes(attributes)
+		+e('span').text TrueConf ID
+		+form-input({type: 'text', name: 'name', placeholder: 'my_id'})
+		+form-input({type: 'password', name: 'password', placeholder: 'Пароль'})
+		+e.checkbox-wrap
+			+checkbox('Запомнить меня')
+		+e('button').button(type='submit') Войти
+		+e.helpers
+			+help-link({href: '#', value: 'Забыли пароль?'})
+			+help-link({href: '#', value: 'Получить учетную запись'})

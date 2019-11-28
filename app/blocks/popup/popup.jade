@@ -1,0 +1,15 @@
+include /blocks/login-form/login-form
+
+mixin popup()
+	+b.popup.js-popup&attributes(attributes)
+		+e.wrap
+			+e('button').close._desktop.js-close(type='button')
+				+e('img').cross(src='/assets/images/cross.svg')
+			+e.content
+				+e('button').close._mobile.js-close(type='button')
+					+e('img').cross(src='/assets/images/cross.svg')
+				+e.content-wrap
+					+e('h3').title Авторизация
+					+login-form()
+			+e.image-wrap
+				+e('img').image(src='/assets/images/popup.png')

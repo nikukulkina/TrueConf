@@ -1,0 +1,26 @@
+.page-main
+	position relative
+	height 100vh
+	font-family 'Roboto', sans-serif
+	font-size 16px
+	font-weight 400
+	color #ffffff
+	background-image url(/assets/images/main-bg.png)
+	background-repeat no-repeat
+	background-position-x center
+	background-size cover
+	
+	&__footer-wrap
+		margin-top 35px
+		background-color $dark-blue
+
+@media(max-width:360px)
+	.page-main
+		background-image url(/assets/images/mobile-bg.png)
+		&__footer-wrap
+			margin-top 24px
+			height auto
+
+@media(max-width:1919px)
+	.page-main
+		height 100%

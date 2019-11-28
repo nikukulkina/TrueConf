@@ -1,0 +1,6 @@
+include /blocks/icon/icon
+
+mixin action-btn(item)
+	+b('button').action-btn(name=item.name)&attributes(attributes)
+		+icon(item.icon).icon
+		!=item.value

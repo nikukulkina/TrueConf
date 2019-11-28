@@ -1,0 +1,6 @@
+mixin checkbox(title)
+	+b('label').checkbox&attributes(attributes)
+		+e('input').input(type='checkbox' checked)
+		+e('span').square
+			+e('img').image(src='/assets/images/checkbox_on_light.png' alt='checked')
+		+e('span').title!=title

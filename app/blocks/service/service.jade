@@ -1,0 +1,8 @@
+include /blocks/button/button
+
+mixin service(items)
+	each item in items
+		+b.service&attributes(attributes)
+			+e.service-wrap
+				+button(item.button)
+				+e.descr!= item.description

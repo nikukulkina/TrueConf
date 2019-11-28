@@ -1,0 +1,17 @@
+include /blocks/overlay/overlay
+include /blocks/popup/popup
+include /blocks/main-container/main-container
+include /blocks/header/header
+include /blocks/main/main
+include /blocks/footer/footer
+
+mixin page-main()
+	+b.page-main&attributes(attributes)
+		+overlay()
+		+popup()
+		+main-container()
+			+header()
+			+main()
+		+e.footer-wrap
+			+main-container()
+				+footer()

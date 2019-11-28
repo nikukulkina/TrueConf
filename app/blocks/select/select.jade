@@ -1,0 +1,11 @@
+include /blocks/select-menu/select-menu
+
+mixin select()
+	+b.select.js-dropdown&attributes(attributes)
+		+e('button').btn.js-select(type='button')
+			+e('span')
+				+e('img').btn-img(src='/assets/images/russia-flag.png' alt='flag')
+		+e('input').service.js-flag(type='hidden' name='language')
+		+select-menu([{id: 'rus', src: '/assets/images/russia-flag.png', alt: 'Russian flag'},
+					{id: 'norus', src: '/assets/images/russia-flag.png', alt: 'Russian flag'}
+					])

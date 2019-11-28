@@ -1,0 +1,7 @@
+include /blocks/icon/icon
+
+mixin button(items)
+	each item in items
+		+b('a').button(href!=item.href class=item.mod)&attributes(attributes)
+				+icon(item.icon).icon
+				!=item.name

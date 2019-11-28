@@ -1,0 +1,18 @@
+include /blocks/title/title
+include /blocks/service/service
+include /blocks/action-btn/action-btn
+
+mixin main()
+	+b('main').main&attributes(attributes)
+		+title('%company')
+		+e('section').content
+			+e.content-wrap
+				+service([{button: [{href: '#', icon: 'download', name: 'скачать приложение'}], description: 'Скачайте приложение, чтобы начать проводить видеоконференции прямо сейчас.'},
+						{button: [{mod: '_pink', href: '#', icon: 'account-circle', name: 'СОЗДАТЬ УЧЕТНУЮ ЗАПИСЬ'}], description: ' Если у вас ещё нет учётной записи, создайте её.'}])
+			+e.content-wrap
+				+service([{button: [{mod: '_blue', href: '#', icon: 'calendar', name: 'запланировать конференцию'}], description: 'Планируйте видеоконференции и вебинары со входом по ссылке.'},
+						{button: [{mod: '_purple', href: '#', icon: 'connect', name: 'ПОДКЛЮЧИТЬСЯ К КОНФЕРЕНЦИИ'}], description: 'Если вы знаете CID конференции, вы можете подключиться к ней прямо в браузере.'}])
+		+e('section').actions
+			+e.actions-wrap
+				+action-btn({icon: 'key', name: 'admin', value: 'Вход для администратора'})
+				+action-btn({icon: 'user-card', name: 'help', value: 'Связь с администратором'})

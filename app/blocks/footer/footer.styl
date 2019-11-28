@@ -1,0 +1,32 @@
+.footer
+	padding-top 15px
+	padding-bottom 15px
+	display flex
+	flex-wrap wrap
+	justify-content space-between
+
+	&__copyrights,
+	&__server,
+	&__details
+		font-size 12px
+		line-height 16px
+
+	&__server
+		margin-bottom 10px
+		width 100%
+
+	&__link
+		text-decoration none
+		color $blue-text
+		&:hover
+			text-decoration underline
+		&:visited
+			color $gray-text
+
+@media(max-width:360px)
+	.footer
+		padding-bottom 27px
+		&__server
+			margin-bottom 14px
+		&__details
+			margin-bottom 14px

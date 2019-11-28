@@ -1,0 +1,14 @@
+include /blocks/logo/logo
+include /blocks/select/select
+include /blocks/icon/icon
+
+mixin header()
+	+b.header&attributes(attributes)
+		+e.logo
+			+logo()
+		+e.settings
+			+e.inner
+				+select()
+				+e('button').log-in.js-logInBtn(type=button)
+					+icon('lock').icon
+					| Личный кабинет

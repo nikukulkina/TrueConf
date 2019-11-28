@@ -1,0 +1,43 @@
+.header
+	padding-top 60px
+	display flex
+	justify-content space-between
+	align-items center
+
+	&__inner
+		display flex
+		justify-content space-between
+		align-items center
+	
+	&__log-in
+		margin-top -3px
+		margin-left 25px
+		padding 0 46px 0 45px
+		max-width 227px
+		min-height 36px
+		font-size 14px
+		line-height 19px
+		color #ffffff
+		background-color transparent
+		border 2px solid #ffffff
+		border-radius 2px
+		transition background-color .3s ease-in
+		&:hover
+			background-color rgba(0, 0, 0, .1)
+
+	&__icon
+		margin-right 8px
+		width 13px
+		height 16px
+		
+@media (max-width: 660px)
+	.header
+		padding-top 43px
+		flex-wrap wrap
+		&__settings
+			margin-bottom 15px
+			width 100%
+			order 1
+		&__logo
+			margin 0 auto
+			order 2

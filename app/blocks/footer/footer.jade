@@ -1,0 +1,10 @@
+mixin footer()
+	+b('footer').footer&attributes(attributes)
+		+e('span').server Сервер:
+			+e('span').server-name  trueconf_server.name.vcs
+		+e('span').details Служба работает на ПО для видеоконференцсвязи TrueConf Server версии 
+			+e('span').details-version %version
+			|. Подробнее на 
+			+e('a').link(href="https://trueconf.com" target="_blanc" rel="nofollow noopener") www.trueconf.ru
+			|.
+		+e('span').copyrights © 2010-2018. ООО «Труконф». Все права защищены.
