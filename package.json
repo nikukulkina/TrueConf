@@ -127,6 +127,6 @@
   "dependencies": {
     "svg4everybody": "^2.0.0",
     "slick-carousel": "^1.8.1",
-    "jquery": "^3.4.0"
+    "jquery": "^3.5.0"
   }
 }
